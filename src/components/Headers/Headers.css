@@ -1,0 +1,11 @@
+.bg-Netflix-header{
+    background-image: url('../../assests/netflix.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-header-main{
+    background-color: #00000036;
+    background-image: linear-gradient(to bottom ,#00000063,#00000085);
+    height:100%
+}
