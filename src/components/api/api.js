@@ -1,5 +1,5 @@
 export const API = {
-  key: "613e8d95f15032dcb00e29c3083c70e2",
+  key: "Add your api",
   base: "https://api.themoviedb.org/3",
 };
 
