@@ -34,3 +34,5 @@ ex: API{key:'Your api', base:'no changes required'}
 So for styling we have used tailwind css. Install the tailwind package. The information about the installing and configuration is avialable in tailwind css website go ahead and follow the steps once the config is done restart the development server to see the style change this is required only once not for every changes
 
 There is bit of custom css have been used so give a try by yourself by working both on tailwind and custom css
+
+There is still more to do
