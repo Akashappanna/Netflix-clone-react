@@ -7,9 +7,9 @@ const Home = () => {
   return (
     <React.Fragment>
       <Headers />
-      <button type='button' >
+      {/* <button type='button' >
         <Link to="/newpage">Newpage</Link>
-      </button>
+      </button> */}
       <Footers />
     </React.Fragment>
   );

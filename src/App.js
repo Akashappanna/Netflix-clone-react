@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/netflix" element={<NetflixHome />} />
         <Route path='/netflix/:playId' element={<NetflixPlay />} />
-        <Route path="/newpage" element={<NewPage />} />
+        {/* <Route path="/newpage" element={<NewPage />} /> */}
       </Routes>
     </div>
   );

@@ -6,6 +6,7 @@ import classes from '../SmallDesc/SmallDesc.module.css'
 import {Link} from 'react-router-dom';
 
 
+
 const base_url = "https://image.tmdb.org/t/p/original/";
 
 const Image = ({movie,isLarge,fetchUrl,isSmall,pos}) => {
@@ -38,7 +39,6 @@ const Image = ({movie,isLarge,fetchUrl,isSmall,pos}) => {
 
   return (
     <React.Fragment>
-
     <div  className={`relative w-full  md:px-4 px-2 flex justify-center  hover:scale-125 hover:z-50 transition-all duration-300 cursor-pointer
     ${isSmall?'w-1/4 md:w-1/5 xl:w-1/6 my-3':''}`}>
         <Link to={`/netflix/${movie.id}`} state={{movie:movie,fetchUrl:fetchUrl}}>
@@ -55,7 +55,6 @@ const Image = ({movie,isLarge,fetchUrl,isSmall,pos}) => {
         </Link>
             {hovered.hover === true &&<SmallDesc smallMovieData={smallMovieData} pos={pos}/>}
     </div>
-
     </React.Fragment>
   )
 }

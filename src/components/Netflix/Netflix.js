@@ -6,7 +6,9 @@ import Banner from "./Banner/Banner";
 import Footers from "../Footers/Footers";
 
 
+
 const Netflix = () => {
+
   return (
     <div className="h-fit">
       <Header />
@@ -16,6 +18,7 @@ const Netflix = () => {
         fetchUrl={api.fetchNetflixOriginal}
         isLarge
       />
+
       <Row title="Top Rated" fetchUrl={api.fetchTopRated} />
       <Row title="Trending" fetchUrl={api.fetchTrending} />
       <Row title="Comedy Movies" fetchUrl={api.fetchComedy} />
