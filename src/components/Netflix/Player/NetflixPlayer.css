@@ -1,0 +1,15 @@
+.player{
+    cursor: pointer;
+    animation:play;
+    transition: 1s;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /* fill:green; */
+}
+
+@keyframes play {
+    0%{fill:black;transform: scale3d(2, 2, 2);}
+    50%{fill:white;transform: scale3d(1,1,1);}
+    100%{fill:black;transform: scale3d(2, 2, 2);}
+}
