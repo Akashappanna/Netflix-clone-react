@@ -10,6 +10,7 @@ const Row = (props) => {
   const { title, fetchUrl, isLarge,isSmall} = props;
   const [pointerDis,setPointerDis] = useState(false);
 
+
   const settings =  {
     arrowsScroll: 4,
     duration: 400,

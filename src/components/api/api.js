@@ -1,5 +1,5 @@
 export const API = {
-  key: "613e8d95f15032dcb00e29c3083c70e2",
+  key: process.env.REACT_APP_NETFLIX_REACT_API,
   base: "https://api.themoviedb.org/3",
 };
 

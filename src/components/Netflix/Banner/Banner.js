@@ -28,7 +28,7 @@ const Banner = () => {
 
 
   const toggleView = () => {
-    if (window.pageYOffset > 300) {
+    if (window.scrollY > 300) {
       setPlay(false);
     } else {
      const new_timer= setTimeout(() => {
