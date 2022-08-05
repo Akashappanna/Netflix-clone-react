@@ -1,44 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { API } from "../../api/api";
-import Image from "./Image";
-
-
-
+import NewRow from "./NewRow";
 
 const Row = (props) => {
   const [movies, setMovies] = useState([]);
-  const { title, fetchUrl, isLarge,isSmall} = props;
-  const [pointerDis,setPointerDis] = useState(false);
+  const { title, fetchUrl, isLarge, isSmall } = props;
 
-
-  const settings =  {
-    arrowsScroll: 4,
-    duration: 400,
-    shift: 100,
-    slidesPerRow: 5,
-    virtualList: true,
-    wheel: false,
-    wheelScroll: 0,
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 8,
+      slidesToSlide: 3, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
   };
-
-  const toggleView = (e) => {
-    if(e.screenX > 650){
-      setPointerDis(true);
-      return;
-    }
-    setPointerDis(false);
-  };
-
- 
-  useEffect(()=>{
-    window.addEventListener('mouseover',toggleView)
-
-    return (()=>{
-      window.removeEventListener('mouseover',toggleView)
-    })
-},[])
- 
-
 
   useEffect(() => {
     const sendRequest = async () => {
@@ -50,27 +34,16 @@ const Row = (props) => {
     sendRequest();
   }, [fetchUrl]);
 
-  
-  
-
   return (
-    <div className="bg-black relative">
-      <h3 className="text-2xl text-white font-bold text-start w-90 m-auto">
-        {title}
-      </h3>
-      
-        <div className={`flex flex-row py-4 mx-auto relative ${isSmall?'flex-wrap':'flex-nowrap'}`}>
-        {movies && movies.map((movie, index) => (
-            <React.Fragment key={index}>
-              <Image   movie={movie} isLarge={isLarge} fetchUrl={fetchUrl} isSmall={isSmall} 
-              pos={pointerDis}
-              />
-            </React.Fragment>
-          ))}
-      </div>
-
-
-    </div>
+    <NewRow
+      data={movies}
+      subData={{
+        title: title,
+        isLarge: isLarge,
+        fetchUrl: fetchUrl,
+        isSmall: isSmall,
+      }}
+    />
   );
 };
 

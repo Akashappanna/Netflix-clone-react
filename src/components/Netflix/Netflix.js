@@ -5,10 +5,7 @@ import Row from "./Row/Row";
 import Banner from "./Banner/Banner";
 import Footers from "../Footers/Footers";
 
-
-
 const Netflix = () => {
-
   return (
     <div className="h-fit">
       <Header />
