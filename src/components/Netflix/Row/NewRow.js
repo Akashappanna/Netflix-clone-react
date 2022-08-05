@@ -29,7 +29,7 @@ const NewRow = (props) => {
       </h3>
 
       {!isSmall && (
-        <div className={`flex flex-row py-4 mx-auto relative`}>
+        <div className={`flex flex-row mx-auto relative py-6`}>
           {movies &&
             movies.map((movie, index) => (
               <Image
