@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Image from "./Image";
+import Carousel from "react-elastic-carousel";
+import "./NewRow.css";
 
 const NewRow = (props) => {
   const { title, isLarge, isSmall, fetchUrl } = props.subData;
   const movies = props.data;
   const [pointerDis, setPointerDis] = useState(false);
+
+  const responsive = [
+    { width: 1, itemsToShow: 2 },
+    { width: 550, itemsToShow: 3 },
+    { width: 768, itemsToShow: 5 },
+    { width: 1360, itemsToShow: 8 },
+  ];
 
   const toggleView = (e) => {
     if (e.screenX > 650) {
@@ -29,7 +38,10 @@ const NewRow = (props) => {
       </h3>
 
       {!isSmall && (
-        <div className={`flex flex-row mx-auto relative py-6`}>
+        <Carousel
+          breakPoints={responsive}
+          className={`flex flex-row mx-auto relative py-6`}
+        >
           {movies &&
             movies.map((movie, index) => (
               <Image
@@ -41,7 +53,7 @@ const NewRow = (props) => {
                 pos={pointerDis}
               />
             ))}
-        </div>
+        </Carousel>
       )}
 
       {isSmall && (

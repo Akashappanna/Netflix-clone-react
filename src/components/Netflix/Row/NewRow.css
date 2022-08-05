@@ -1,0 +1,36 @@
+.rec.rec-pagination {
+  display: none;
+}
+.rec.rec-carousel {
+  overflow: initial;
+}
+.rec.rec-slider-container {
+  overflow: initial;
+}
+.rec.rec-slider {
+  overflow: initial;
+}
+.rec.rec-swipable {
+  overflow: initial;
+}
+.rec.rec-carousel-item {
+  overflow: initial;
+}
+.rec.rec-item-wrapper {
+  overflow: initial;
+}
+.rec.rec-arrow {
+  color: #ff0000;
+  z-index: 99;
+  background-color: black;
+}
+
+.rec.rec-arrow-left:hover:enabled,
+.rec.rec-arrow-left:active:enabled,
+.rec.rec-arrow-left:focus:enabled,
+.rec.rec-arrow-right:hover:enabled,
+.rec.rec-arrow-right:focus:enabled,
+.rec.rec-arrow-right:active:enabled {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 0, 0);
+}
